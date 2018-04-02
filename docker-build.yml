@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  serveo:
+    build: ./build
+    image: taichunmin/serveo:latest

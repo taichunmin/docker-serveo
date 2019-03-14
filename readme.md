@@ -34,7 +34,7 @@ services:
 ## Demo
 
 ```bash
-$ git clone git@github.com:taichunmin/docker-cloudflare-warp.git
+$ git clone https://github.com/taichunmin/docker-serveo.git
 
 $ sudo docker-compose up -d
 

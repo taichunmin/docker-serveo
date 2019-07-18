@@ -22,7 +22,7 @@ services:
     tty: true
     stdin_open: true
     # see https://serveo.net/ for more options
-    command: "ssh -R 80:nginx:80 -o \"StrictHostKeyChecking no\" serveo.net"
+    command: "autossh -M 0 -R 80:nginx:80 -o \"StrictHostKeyChecking no\" serveo.net"
   nginx:
     image: nginx:latest
 ```

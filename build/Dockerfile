@@ -1,6 +1,8 @@
 FROM alpine:latest
 LABEL maintainer="taichunmin@gmail.com"
 
-RUN apk add --no-cache openssh
+RUN set -ex; \
+  echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories; \
+  apk add --no-cache openssh autossh
 
 CMD ["/bin/sh"]

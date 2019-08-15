@@ -22,7 +22,14 @@ services:
     tty: true
     stdin_open: true
     # see https://serveo.net/ for more options
-    command: autossh -M 0 -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=no -R 80:nginx:80 serveo.net
+    command: >
+      autossh -M 0
+      -o ServerAliveInterval=60
+      -o ServerAliveCountMax=3
+      -o ExitOnForwardFailure=yes
+      -o StrictHostKeyChecking=no
+      -R 80:nginx:80
+      serveo.net
   nginx:
     image: nginx:latest
 ```
@@ -44,8 +51,6 @@ Attaching to dockerserveo_serveo_1
 serveo_1  | Warning: Permanently added 'serveo.net,195.201.91.242' (RSA) to the list of known hosts.
 serveo_1  | Forwarding HTTP traffic from https://proinde.serveo.net
 serveo_1  | Press g to start a GUI session and ctrl-c to quit.
-serveo_1  | HTTP request from 125.227.205.43 to https://proinde.serveo.net/
-serveo_1  | HTTP request from 125.227.205.43 to https://proinde.serveo.net/favicon.ico
 ```
 
 ## LICENSE

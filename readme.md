@@ -2,8 +2,7 @@
 [![GitHub license](https://img.shields.io/github/license/taichunmin/docker-serveo.svg)](https://github.com/taichunmin/docker-serveo/blob/master/LICENSE)
 ![Docker Stars](https://img.shields.io/docker/stars/taichunmin/serveo.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/taichunmin/serveo.svg)
-![Docker Automated build](https://img.shields.io/docker/automated/taichunmin/serveo.svg)
-![Docker Build Status](https://img.shields.io/docker/build/taichunmin/serveo.svg)
+[![Build status](https://img.shields.io/github/actions/workflow/status/taichunmin/docker-serveo/dockerhub.yml?branch=master)](https://github.com/taichunmin/docker-serveo/actions/workflows/dockerhub.yml)
 
 # docker for serveo.net
 
@@ -21,7 +20,6 @@ services:
     image: taichunmin/serveo:latest
     tty: true
     stdin_open: true
-    # see https://serveo.net/ for more options
     command: >
       autossh -M 0
       -o ServerAliveInterval=60
@@ -37,6 +35,8 @@ services:
 2. use `docker-compose up -d` to start container.
 
 3. you need to use `docker-compose logs serveo` to see your new URL.
+
+4. For more options, see [serveo.net](https://serveo.net) or [serveo.net backup](./serveo.net.md).
 
 ## Demo
 
